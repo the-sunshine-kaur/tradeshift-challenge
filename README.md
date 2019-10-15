@@ -16,3 +16,13 @@ node identification who is the parent node who is the root node the height of th
 In the above example, height(root) = 0 and height(a) == 1. 
 
 Our boss is evil and we can only have docker and docker-compose on our machines. So your server needs to be ran using them.  
+
+
+
+Build the project with Maven
+
+Setup a MYSQL database
+
+Run the complete stack with docker compose: docker-compose up
+
+Stop all the services at once using docker compose using the command: docker-compose down

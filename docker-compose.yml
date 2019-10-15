@@ -1,23 +1,23 @@
 version: '3'
 
 services:
-  mysql-docker-container:
+  amazing-co-ravneet-container:
     image: mysql:latest
     environment:
-      - MYSQL_ROOT_PASSWORD=root123
-      - MYSQL_DATABASE=spring_app_db
-      - MYSQL_USER=app_user
-      - MYSQL_PASSWORD=test123
+      - MYSQL_ROOT_PASSWORD=test@1234
+      - MYSQL_DATABASE=mysqldb
+      - MYSQL_USER=ravneetuser
+      - MYSQL_PASSWORD=test@1234
     volumes:
       - /data/mysql
-  spring-boot-jpa-app:
-    image: spring-boot-jpa-image
+  amazing-co-app:
+    image: amazing-co-image
     build:
       context: ./
       dockerfile: Dockerfile
     depends_on:
-      - mysql-docker-container
+      - amazing-co-ravneet-container
     ports:
       - 8087:8080
     volumes:
-      - /data/spring-boot-app
+      - /data/amazing-co-app
